@@ -15,6 +15,10 @@ import {MenubarModule} from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { FormsComponent } from './forms/forms.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { ForgetpasswordComponent } from './auth/forgetpassword/forgetpassword.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,10 @@ import { FormsComponent } from './forms/forms.component';
     TableComponent,
     HomeComponent,
     NavebarComponent,
-    FormsComponent
+    FormsComponent,
+    LoginComponent,
+    SignupComponent,
+    ForgetpasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -31,10 +38,12 @@ import { FormsComponent } from './forms/forms.component';
     MatTableModule,
     MatPaginatorModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     MatCardModule,
     MenubarModule,
     InputTextModule,
     ButtonModule,
+    FormsModule,
 
 
   ],
