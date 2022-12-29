@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup, RequiredValidator,} from '@angular/forms';
+import { Router, RouterEvent } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,17 +9,24 @@ import { FormControl, Validators, FormGroup, RequiredValidator,} from '@angular/
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router :Router) { }
 
   ngOnInit(): void {
   }
-  value1:any
+  username :any;
+  password : any ;
   login = new FormGroup({
     username : new FormControl('',Validators.required),
     password : new FormControl('', Validators.required)
   })
   submit()
   {
-  console.log('username', this.login.value);
+    console.log('auth', this.login.value);
+    this.router.navigateByUrl('home')
+  }
+
+  signup()
+  {
+
   }
 }
