@@ -16,7 +16,12 @@ export class ApiServiceService {
 
   postData(val : any)
   {
-    return this.http.post("http://localhost:3000/users", val).pipe(map(result => {return result}))
+    return this.http.post(" http://localhost:3000/newUser", val).pipe(map(result => {return result}))
+  }
+
+  cred(obj : any)
+  {
+    return this.http.post("http://localhost:3000/loginCred", obj).pipe(map(result => {return result}))
   }
 
 }

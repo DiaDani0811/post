@@ -1,1 +1,34 @@
-<p>signup works!</p>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h4> Great Girikalan Magic Show Registration Form</h4>
+      <div class="card-body">
+        <form [formGroup]="signUpForm">
+          <div class="container-fluid">
+            <label for="firstName">First Name :</label>
+            <input type="text" id="firstName" formControlName="firstName">
+            <label for="firstName">Last Name : </label>
+            <input type="text" formControlName="lastName">
+            <label for="firstName">Email : </label>
+            <input type="text" formControlName="email">
+            <label for="firstName">Enter Password : </label>
+            <input type="text" formControlName="password">
+          </div>
+          <div class="container-fluid">
+            <label for="firstName">Door No :</label>
+            <input type="text" id="firstName" formControlName="firstName">
+            <label for="firstName">Street : </label>
+            <input type="text" formControlName="lastName">
+            <label for="firstName">City : </label>
+            <input type="text" formControlName="email">
+            <label for="firstName">State : </label>
+            <input type="text" formControlName="password">
+            <label for="firstName">Zip-Code : </label>
+            <input type="text" formControlName="password">
+          </div>
+        </form>
+        <button (click)="backToLogin()"> Back To Lgin </button>
+      </div>
+    </div>
+  </div>
+</div>

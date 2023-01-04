@@ -19,6 +19,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { ForgetpasswordComponent } from './auth/forgetpassword/forgetpassword.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     FormsComponent,
     LoginComponent,
     SignupComponent,
-    ForgetpasswordComponent
+    ForgetpasswordComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,

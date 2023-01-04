@@ -21,6 +21,7 @@ export class NavebarComponent implements OnInit {
           icon : 'pi pi-home',
           routerLink : 'home',
 
+
       },
       {
           label: 'table',

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators, FormGroup, RequiredValidator,} from '@angular/forms';
+import { FormControl, Validators, FormGroup, RequiredValidator, MinLengthValidator, } from '@angular/forms';
 import { Router, RouterEvent } from '@angular/router';
+import { ApiServiceService } from 'src/app/service/api-service.service';
 
 @Component({
   selector: 'app-login',
@@ -9,24 +10,27 @@ import { Router, RouterEvent } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router :Router) { }
+  constructor(private router: Router, private api: ApiServiceService) { }
 
   ngOnInit(): void {
   }
-  username :any;
-  password : any ;
+  username: any;
+  password: any;
   login = new FormGroup({
-    username : new FormControl('',Validators.required),
-    password : new FormControl('', Validators.required)
+    username: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required)
   })
-  submit()
-  {
-    console.log('auth', this.login.value);
-    this.router.navigateByUrl('home')
+
+  usercred: any
+  submit() {
+    // console.log('========>', this.login.value);
+    this.api.cred(this.login.value).subscribe(result => {
+      this.usercred = result
+    })
+    this.router.navigateByUrl('layout')
+
   }
-
-  signup()
-  {
-
+  signup() {
+    this.router.navigateByUrl('sign')
   }
 }
