@@ -1,7 +1,10 @@
+import { validateHorizontalPosition } from '@angular/cdk/overlay';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators, FormGroup, RequiredValidator, FormBuilder} from '@angular/forms';
+import { FormControl, Validators, FormGroup, RequiredValidator, FormBuilder, MaxLengthValidator, MaxValidator} from '@angular/forms';
 import { Router } from '@angular/router';
+import { clear } from 'console';
 import { min } from 'rxjs';
+import { ApiServiceService } from 'src/app/service/api-service.service';
 
 @Component({
   selector: 'app-signup',
@@ -10,25 +13,30 @@ import { min } from 'rxjs';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private router : Router, private formb : FormBuilder) { }
+  constructor(private router : Router,
+              private formb : FormBuilder,
+              private api : ApiServiceService) { }
 
   ngOnInit(): void {
+
   }
-  signUpForm = this.formb.group({
-    firstName : ['',[Validators.required, Validators.min(2)]],
-    lastName : [''],
-    email : [''],
-    password : [''],
-    address : this.formb.group({
-      doorNo : [''],
-      street: [''],
-      city: [''],
-      state: [''],
-      zip: ['']
-    })
-  })
+
+  submit(){}
   backToLogin()
   {
     this.router.navigateByUrl('login')
+  }
+
+  newUser :any = {}
+  regUser : any=[]
+  signUp(form:any)
+  {
+    this.api.newuserData(this.newUser).subscribe(data => {
+      this.regUser.push(this.newUser)
+
+    })
+console.log('=====>', this.regUser);
+  form.reset()
+  this.router.navigateByUrl('login')
   }
 }

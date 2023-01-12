@@ -4,7 +4,7 @@
 
 <div class="d-flex justify-content-center">
   <div class="card mt-3 col-3 ">
-    <div class="card-header mb-3">Login</div>
+    <div class="card-header mb-3" style="font-weight: 700;">Login</div>
     <div class="card-body">
       <form [formGroup]="login" style="margin-left: 20px;" (ngSubmit)="submit()">
         <div class="wave-group">
@@ -36,11 +36,12 @@
           </label>
         </div> <br>
         <div class="d-flex justify-content-center" style="margin-right: 39px;">
-          <button [disabled]="login.invalid" class=" mr-2" type="submit">login</button>
-          <button class="" (click)="signup()"> Sign up</button>
+          <button class="login" [disabled]="login.invalid" class=" mr-2" type="submit">login</button>
+          <button  (click)="signup()"> Sign up</button>
         </div>
       </form>
     </div>
   </div>
 </div>
 <img src="  ./assets/svg/wave.svg" alt="">
+

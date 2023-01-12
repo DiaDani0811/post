@@ -21,6 +21,7 @@ import { ForgetpasswordComponent } from './auth/forgetpassword/forgetpassword.co
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { LayoutComponent } from './layout/layout.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { LayoutComponent } from './layout/layout.component';
     LoginComponent,
     SignupComponent,
     ForgetpasswordComponent,
-    LayoutComponent
+    LayoutComponent,
+
   ],
   imports: [
     BrowserModule,

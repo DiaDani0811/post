@@ -7,6 +7,7 @@
 
 }
 
+
 .wave-group {
     position: relative;
   }
@@ -134,7 +135,7 @@
    }
 
    button:disabled {
-    cursor: auto;
+    cursor: not-allowed;
    }
 
    button:active:after {

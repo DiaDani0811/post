@@ -10,7 +10,7 @@ import { ApiServiceService } from 'src/app/service/api-service.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router, private api: ApiServiceService) { }
+  constructor(private router: Router, private api: ApiServiceService, ) { }
 
   ngOnInit(): void {
   }
@@ -23,12 +23,9 @@ export class LoginComponent implements OnInit {
 
   usercred: any
   submit() {
-    // console.log('========>', this.login.value);
     this.api.cred(this.login.value).subscribe(result => {
-      this.usercred = result
-    })
+      this.usercred = result })
     this.router.navigateByUrl('layout')
-
   }
   signup() {
     this.router.navigateByUrl('sign')

@@ -1,34 +1,74 @@
-<div class="container">
-  <div class="card">
-    <div class="card-header">
-      <h4> Great Girikalan Magic Show Registration Form</h4>
+<div class="d-flex justify-content-center mt-1">
+    <h3>Welcome to Great Girikalan Magic Show </h3>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <div class="card mt-3 col-3 ">
+      <div class="card-header mb-3" style="font-weight: 700;">Sign up</div>
       <div class="card-body">
-        <form [formGroup]="signUpForm">
-          <div class="container-fluid">
-            <label for="firstName">First Name :</label>
-            <input type="text" id="firstName" formControlName="firstName">
-            <label for="firstName">Last Name : </label>
-            <input type="text" formControlName="lastName">
-            <label for="firstName">Email : </label>
-            <input type="text" formControlName="email">
-            <label for="firstName">Enter Password : </label>
-            <input type="text" formControlName="password">
-          </div>
-          <div class="container-fluid">
-            <label for="firstName">Door No :</label>
-            <input type="text" id="firstName" formControlName="firstName">
-            <label for="firstName">Street : </label>
-            <input type="text" formControlName="lastName">
-            <label for="firstName">City : </label>
-            <input type="text" formControlName="email">
-            <label for="firstName">State : </label>
-            <input type="text" formControlName="password">
-            <label for="firstName">Zip-Code : </label>
-            <input type="text" formControlName="password">
+        <form  style="margin-left: 20px;" novalidate #signupForm="ngForm">
+          <div class="wave-group">
+            <input required="" type="text" id="Name" class="input" name="userName" [(ngModel)]="newUser.name" #name="ngModel">
+            <span class="bar"></span>
+            <label class="label" for="Name">
+              <span class="label-char" style="--index: 0">Name</span>
+              <!-- <span class="label-char" style="--index: 1">a</span>
+              <span class="label-char" style="--index: 2">m</span>
+              <span class="label-char" style="--index: 3">e</span> -->
+            </label>
+          </div> <br>
+          <div class="wave-group">
+            <input required="" type="text" class="input" name="email" [(ngModel)]="newUser.email" #email="ngModel" id="email">
+            <span class="bar"></span>
+            <label class="label" for="email">
+              <span class="label-char" style="--index: 0">Email</span>
+              <!-- <span class="label-char" style="--index: 0">m</span>
+              <span class="label-char" style="--index: 0">a</span>
+              <span class="label-char" style="--index: 0">i</span>
+              <span class="label-char" style="--index: 0">l</span> -->
+            </label>
+          </div> <br>
+          <div class="wave-group">
+            <input required="" type="password" class="input" name="password" [(ngModel)]="newUser.password" id="password">
+            <span class="bar"></span>
+            <label class="label" for="password">
+              <span class="label-char" style="--index: 0">P</span>
+              <span class="label-char" style="--index: 0">a</span>
+              <span class="label-char" style="--index: 0">s</span>
+              <span class="label-char" style="--index: 0">s</span>
+              <span class="label-char" style="--index: 1">w</span>
+              <span class="label-char" style="--index: 2">o</span>
+              <span class="label-char" style="--index: 3">r</span>
+              <span class="label-char" style="--index: 3">d</span>
+            </label>
+          </div> <br>
+          <div class="wave-group">
+            <input required="" type="password" class="input" name="conPassword" [(ngModel)]="newUser.conPassword" id="conPassword">
+            <span class="bar"></span>
+            <label class="label" for="conPassword">
+              <span class="label-char" style="--index: 0">C</span>
+              <span class="label-char" style="--index: 0">o</span>
+              <span class="label-char" style="--index: 0">n</span>
+              <span class="label-char" style="--index: 0">f</span>
+              <span class="label-char" style="--index: 0">i</span>
+              <span class="label-char" style="--index: 1">r</span>
+              <span class="label-char" style="--index: 2">m</span> &nbsp;
+              <span class="label-char" style="--index: 0">P</span>
+              <span class="label-char" style="--index: 0">a</span>
+              <span class="label-char" style="--index: 0">s</span>
+              <span class="label-char" style="--index: 0">s</span>
+              <span class="label-char" style="--index: 1">w</span>
+              <span class="label-char" style="--index: 2">o</span>
+              <span class="label-char" style="--index: 3">r</span>
+              <span class="label-char" style="--index: 3">d</span>
+            </label>
+          </div> <br>
+          <div class="d-flex row justify-content-center"     style="margin-right: 39px;">
+            <button class="signup mb-1" type="submit" (click)="signUp(signupForm)"> Sign up</button>
+            <button class=" mr-2 btn mt-1" (click)="backToLogin()">Back to Login</button>
           </div>
         </form>
-        <button (click)="backToLogin()"> Back To Lgin </button>
       </div>
     </div>
   </div>
-</div>
+  <img src="  ./assets/svg/wave.svg" alt="">
