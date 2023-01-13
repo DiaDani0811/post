@@ -14,19 +14,9 @@
     }
   ],
   "newUser": [
-    {
-      "name": "Dinesh",
-      "email": "admin@admin.com",
-      "password": "dinesh",
-      "conPassword": "danield",
-      "id": 1
-    }
+
   ],
   "loginCred": [
-    {
-      "username": "Danield",
-      "password": "dinesh2023",
-      "id": 1
-    }
+
   ]
 }

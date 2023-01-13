@@ -145,3 +145,12 @@
    button:active {
     padding-bottom: 10px;
    }
+   .img-fluid
+{
+    position: absolute;
+    top: 295px;
+    z-index: -1;
+    min-height: -webkit-fill-available;
+}
+
+

@@ -6,9 +6,9 @@
     <div class="card mt-3 col-3 ">
       <div class="card-header mb-3" style="font-weight: 700;">Sign up</div>
       <div class="card-body">
-        <form  style="margin-left: 20px;" novalidate #signupForm="ngForm">
+        <form  style="margin-left: 20px;" name="signup" novalidate #signupForm="ngForm" (ngSubmit)="signupForm.submitted && signUp(signupForm)">
           <div class="wave-group">
-            <input required="" type="text" id="Name" class="input" name="userName" [(ngModel)]="newUser.name" #name="ngModel">
+            <input required="" type="text" id="Name" class="input" name="userName" [(ngModel)]="newUser.name"  #userName="ngModel">
             <span class="bar"></span>
             <label class="label" for="Name">
               <span class="label-char" style="--index: 0">Name</span>
@@ -32,22 +32,22 @@
             <input required="" type="password" class="input" name="password" [(ngModel)]="newUser.password" id="password">
             <span class="bar"></span>
             <label class="label" for="password">
-              <span class="label-char" style="--index: 0">P</span>
-              <span class="label-char" style="--index: 0">a</span>
+              <span class="label-char" style="--index: 0">Password</span>
+              <!-- <span class="label-char" style="--index: 0">a</span>
               <span class="label-char" style="--index: 0">s</span>
               <span class="label-char" style="--index: 0">s</span>
               <span class="label-char" style="--index: 1">w</span>
               <span class="label-char" style="--index: 2">o</span>
               <span class="label-char" style="--index: 3">r</span>
-              <span class="label-char" style="--index: 3">d</span>
+              <span class="label-char" style="--index: 3">d</span> -->
             </label>
           </div> <br>
           <div class="wave-group">
             <input required="" type="password" class="input" name="conPassword" [(ngModel)]="newUser.conPassword" id="conPassword">
             <span class="bar"></span>
             <label class="label" for="conPassword">
-              <span class="label-char" style="--index: 0">C</span>
-              <span class="label-char" style="--index: 0">o</span>
+              <span class="label-char" style="--index: 0">Confirm password</span>
+              <!-- <span class="label-char" style="--index: 0">o</span>
               <span class="label-char" style="--index: 0">n</span>
               <span class="label-char" style="--index: 0">f</span>
               <span class="label-char" style="--index: 0">i</span>
@@ -60,15 +60,15 @@
               <span class="label-char" style="--index: 1">w</span>
               <span class="label-char" style="--index: 2">o</span>
               <span class="label-char" style="--index: 3">r</span>
-              <span class="label-char" style="--index: 3">d</span>
+              <span class="label-char" style="--index: 3">d</span> -->
             </label>
           </div> <br>
-          <div class="d-flex row justify-content-center"     style="margin-right: 39px;">
-            <button class="signup mb-1" type="submit" (click)="signUp(signupForm)"> Sign up</button>
+          <div class="d-flex row justify-content-center"     style="margin-right: 19px; appearance: button;">
+            <button class="signup mb-1" type="submit" [disabled]="!signupForm.valid"> Sign up</button>
             <button class=" mr-2 btn mt-1" (click)="backToLogin()">Back to Login</button>
           </div>
         </form>
       </div>
     </div>
   </div>
-  <img src="  ./assets/svg/wave.svg" alt="">
+  <img src="  ./assets/svg/wave.svg" alt="wave" class="img-fluid">
