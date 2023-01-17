@@ -6,7 +6,7 @@
     <div class="card mt-3 col-3 ">
       <div class="card-header mb-3" style="font-weight: 700;">Sign up</div>
       <div class="card-body">
-        <form  style="margin-left: 20px;" name="signup" novalidate #signupForm="ngForm" (ngSubmit)="signupForm.submitted && signUp(signupForm)">
+        <form  style="margin: 20px;" name="signup" novalidate #signupForm="ngForm" (ngSubmit)="signupForm.submitted && signUp(signupForm)">
           <div class="wave-group">
             <input required="" type="text" id="Name" class="input" name="userName" [(ngModel)]="newUser.name"  #userName="ngModel">
             <span class="bar"></span>
@@ -64,7 +64,7 @@
             </label>
           </div> <br>
           <div class="d-flex row justify-content-center"     style="margin-right: 19px; appearance: button;">
-            <button class="signup mb-1" type="submit" [disabled]="!signupForm.valid"> Sign up</button>
+            <button class="signup mb-1" type="submit" [disabled]="!signupForm.valid"> Sign up</button> <br>
             <button class=" mr-2 btn mt-1" (click)="backToLogin()">Back to Login</button>
           </div>
         </form>

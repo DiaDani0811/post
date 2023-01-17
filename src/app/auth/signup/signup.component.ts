@@ -18,8 +18,7 @@ export class SignupComponent implements OnInit {
               private api : ApiServiceService) { }
 
   ngOnInit(): void {
-
-  }
+      }
 
   submit(){}
   backToLogin()
