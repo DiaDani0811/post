@@ -26,16 +26,23 @@ export class SignupComponent implements OnInit {
     this.router.navigateByUrl('login')
   }
 
-  newUser :any = {}
-  regUser : any=[]
+  newUser :any = {};
+  regUser : any=[];
+  errmsg=''
   signUp(form:any)
   {
-    this.api.newuserData(this.newUser).subscribe(data => {
-      this.regUser.push(this.newUser)
-
-    })
-console.log('=====>', this.regUser);
+    
+    if(this.newUser.password == this.newUser.conPassword){
+      this.api.newuserData(this.newUser).subscribe(data => {
+        this.regUser.push(this.newUser)
+      })
+      this.errmsg = 'Account created successfully'
+      this.router.navigateByUrl('login')
+    }
+    else{
+      this.errmsg = 'password and confirm password does not match'
+      window.alert(this.errmsg)
+    }
   form.reset()
-  this.router.navigateByUrl('login')
   }
 }

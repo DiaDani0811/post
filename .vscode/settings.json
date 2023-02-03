@@ -5,7 +5,7 @@
     "editor.autoClosingQuotes": "languageDefined",
     "editor.colorDecorators": true,
     "editor.cursorBlinking": "expand",
-    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorStyle": "line",
     "editor.cursorWidth": 3,
     "editor.dragAndDrop": true,

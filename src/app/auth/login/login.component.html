@@ -2,39 +2,40 @@
   <h3>Welcome to Great Girikalan Magic Show </h3>
 </div>
 
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center col-12">
   <div class="card mt-3 col-3 ">
     <div class="card-header mb-3" style="font-weight: 700;">Login</div>
     <div class="card-body">
-      <form [formGroup]="login" style="margin-left: 20px;" (ngSubmit)="submit()">
+      <form [formGroup]="login" style="margin-left: 20px;" (ngSubmit)="submit(login.value)">
         <div class="wave-group">
-          <input required="" type="text" class="input" formControlName="username">
+          <input required="" type="text" class="input"  formControlName="username">
           <span class="bar"></span>
           <label class="label">
-            <span class="label-char" style="--index: 0">U</span>
-            <span class="label-char" style="--index: 0">s</span>
-            <span class="label-char" style="--index: 0">e</span>
-            <span class="label-char" style="--index: 0">r</span>
-            <span class="label-char" style="--index: 0">N</span>
-            <span class="label-char" style="--index: 1">a</span>
-            <span class="label-char" style="--index: 2">m</span>
+            <span class="label-char" style="--index: 1">U</span>
+            <span class="label-char" style="--index: 2">s</span>
             <span class="label-char" style="--index: 3">e</span>
+            <span class="label-char" style="--index: 4">r</span>
+            <span class="label-char" style="--index: 5">N</span>
+            <span class="label-char" style="--index: 6">a</span>
+            <span class="label-char" style="--index: 7">m</span>
+            <span class="label-char" style="--index: 8">e</span>
           </label>
         </div> <br>
         <div class="wave-group">
           <input required="" type="password" class="input" formControlName="password">
           <span class="bar"></span>
           <label class="label">
-            <span class="label-char" style="--index: 0">P</span>
-            <span class="label-char" style="--index: 0">a</span>
-            <span class="label-char" style="--index: 0">s</span>
-            <span class="label-char" style="--index: 0">s</span>
-            <span class="label-char" style="--index: 0">w</span>
-            <span class="label-char" style="--index: 1">o</span>
-            <span class="label-char" style="--index: 2">r</span>
-            <span class="label-char" style="--index: 3">d</span>
+            <span class="label-char" style="--index: 1">P</span>
+            <span class="label-char" style="--index: 2">a</span>
+            <span class="label-char" style="--index: 3">s</span>
+            <span class="label-char" style="--index: 4">s</span>
+            <span class="label-char" style="--index: 5">w</span>
+            <span class="label-char" style="--index: 6">o</span>
+            <span class="label-char" style="--index: 7">r</span>
+            <span class="label-char" style="--index: 8">d</span>
           </label>
         </div> <br>
+        <div class="text-danger" *ngIf="msg!=''">{{msg}}</div>
         <div class="d-flex justify-content-center" style="margin-right: 39px;">
           <button class="login" [disabled]="login.invalid" class=" mr-2" type="submit">login</button>
           <button  (click)="signup()"> Sign up</button>

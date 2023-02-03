@@ -10,9 +10,17 @@ import { ApiServiceService } from 'src/app/service/api-service.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router, private api: ApiServiceService, ) { }
+  constructor(private router: Router, private api: ApiServiceService,) { }
+  allUserList: any
 
   ngOnInit(): void {
+    this.api.newuserData;
+
+    this.api.getAllNewUser().subscribe(userData =>{
+      this.allUserList = userData
+      console.log('this.allUserList',this.allUserList);
+    } )
+    
   }
   username: any;
   password: any;
@@ -21,13 +29,18 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', Validators.required)
   })
 
-  usercred: any
-  submit() {
-    this.api.cred(this.login.value).subscribe(result => {
-      this.usercred = result })
-    this.router.navigateByUrl('layout')
+  msg : string=''
+  submit(login: any) {
+    console.log('=====>', login);
+    for (var userList of this.allUserList) {
+      console.log('', userList);
+      if (login.username == userList.name && login.password == userList.password) { this.router.navigate(['layout'])}
+     
+    }
+      this.msg = 'Invalid User'
   }
   signup() {
     this.router.navigateByUrl('sign')
   }
+
 }

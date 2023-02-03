@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "code": "202201",
+      "name": "Smith",
+      "salary": 10000,
+      "role": "admin"
+    },
+    {
+      "code": "202202",
+      "name": "Walsh",
+      "salary": 20000,
+      "role": "user"
+    }
+  ],
+  "newUser": [
+    {
+      "name": "Daniel",
+      "email": "danieldd0811@gmail.com",
+      "password": "Danield",
+      "conPassword": "Danield",
+      "id": 1
+    },
+    {
+      "name": "Dan",
+      "email": "dines@gmail.com",
+      "password": "Dinesh",
+      "conPassword": "Dinesh",
+      "id": 2
+    },
+    {
+      "name": "dia",
+      "email": "dia@gmail.com",
+      "password": "dia@123",
+      "conPassword": "dia@123",
+      "id": 3
+    }
+  ]
+}
