@@ -11,17 +11,16 @@ import { ApiServiceService } from 'src/app/service/api-service.service';
 export class LoginComponent implements OnInit {
 
   constructor(private router: Router, private api: ApiServiceService,) { }
-  allUserList: any
-
+  userList:any
   ngOnInit(): void {
-    this.api.newuserData;
-
-    this.api.getAllNewUser().subscribe(userData =>{
-      this.allUserList = userData
-      console.log('this.allUserList',this.allUserList);
-    } )
     
+    this.api.getAllNewUser().subscribe(data=>{
+      this.userList = data
+      console.log('=========>', this.userList);
+    })
   }
+
+
   username: any;
   password: any;
   login = new FormGroup({
@@ -30,16 +29,20 @@ export class LoginComponent implements OnInit {
   })
 
   msg : string=''
-  submit(login: any) {
-    console.log('=====>', login);
-    for (var userList of this.allUserList) {
-      console.log('', userList);
-      if (login.username == userList.name && login.password == userList.password) { this.router.navigate(['layout'])}
-     
+  Count : boolean= false;
+  submit(lValue) {
+   for (let data of this.userList)
+   {
+    if( data.name == lValue.username &&  data.password == lValue.password)
+    {
+      this.router.navigate(['layout'])
     }
-      this.msg = 'Invalid User'
+   }
+   this.msg='Invalid Credentials';
+   
   }
   signup() {
+    
     this.router.navigateByUrl('sign')
   }
 

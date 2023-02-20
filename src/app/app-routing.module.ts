@@ -17,9 +17,11 @@ const routes: Routes = [
 
    {
     path:'layout',component:LayoutComponent,
+
      children:[
-       {path:'',redirectTo:'home',pathMatch:'full'},
-       {component : TableComponent, path:'table'},
+      
+      {path:'',redirectTo:'home',pathMatch:'full'},
+      {component : TableComponent, path:'table'},
       {component : HomeComponent, path:'home'},
       {component : FormsComponent, path:'forms'},
     ]

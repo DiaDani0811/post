@@ -23,7 +23,6 @@ export class TableComponent implements OnInit {
   }
 
   displayedColumns: string[] = ['name', 'code', 'salary', 'role'];
-
 }
 
 

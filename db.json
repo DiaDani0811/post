@@ -4,13 +4,15 @@
       "code": "202201",
       "name": "Smith",
       "salary": 10000,
-      "role": "admin"
+      "role": "admin",
+      "id": 1
     },
     {
       "code": "202202",
       "name": "Walsh",
       "salary": 20000,
       "role": "user"
+      
     }
   ],
   "newUser": [
@@ -34,6 +36,27 @@
       "password": "dia@123",
       "conPassword": "dia@123",
       "id": 3
+    },
+    {
+      "name": "vignesh",
+      "email": "vigneshb@gmail.com",
+      "password": "vicky",
+      "conPassword": "vicky",
+      "id": 4
+    },
+    {
+      "name": "vignesh",
+      "email": "vigneshb@gmail.com",
+      "password": "321",
+      "conPassword": "321",
+      "id": 5
+    },
+    {
+      "name": "vignesh",
+      "email": "vigneshb@gmail.com",
+      "password": "123",
+      "conPassword": "123",
+      "id": 6
     }
   ]
 }

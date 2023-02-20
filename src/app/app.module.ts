@@ -20,7 +20,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { ForgetpasswordComponent } from './auth/forgetpassword/forgetpassword.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { LayoutComponent } from './layout/layout.component';
-
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -48,6 +48,7 @@ import { LayoutComponent } from './layout/layout.component';
     InputTextModule,
     ButtonModule,
     FormsModule,
+    TableModule,
 
 
   ],

@@ -1,1 +1,43 @@
-<p>forms works!</p>
+<h3>Enter Employee Details </h3>
+
+<form [formGroup]="addEmployeeForm" (ngSubmit)="addEmpForm(addEmployeeForm.value)">
+  <div class="card">
+    <div class="row m-3">
+      <span class="font-weight-bold mt-1">
+        <label for="name">Name : </label>
+      </span>
+      <span class="col-4">
+        <input type="text" name="empName" id="name" formControlName="name" placeholder="Enter Name" class="form-control">
+      </span>
+    </div>
+    <div class="row m-3">
+      <span class="font-weight-bold mt-1">
+        <label for="Code">Code : </label>
+      </span>
+      <span class="col-4">
+        <input type="text" name="empCode" id="Code" formControlName="code" placeholder="Enter Code" class="form-control">
+      </span>
+    </div>
+    <div class="row m-3">
+      <span class="font-weight-bold mt-1">
+        <label for="Salary">Salary : </label>
+      </span>
+      <span class="col-4">
+        <input type="text" name="empSalary" id="Salary" formControlName="salary" placeholder="Enter Salary" class="form-control">
+      </span>
+    </div>
+    <div class="row m-3">
+      <span class="font-weight-bold mt-1">
+        <label for="role">Role : </label>
+      </span>
+      <span class="col-4">
+        <input type="text" name="empRole" id="role" formControlName="role" placeholder="Enter role" class="form-control">
+      </span>
+    </div>
+
+    <div class="justify-content-end">
+      <button pButton pRipple type="submit" label="Save" [disabled]="!addEmployeeForm.valid"
+        class="p-button-raised p-button-help"></button>
+    </div>
+  </div>
+</form>

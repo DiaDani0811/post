@@ -6,7 +6,7 @@
     <div class="card mt-3 col-3 ">
       <div class="card-header mb-3" style="font-weight: 700;">Sign up</div>
       <div class="card-body">
-        <form  style="margin: 20px;" name="signup" novalidate #signupForm="ngForm" (ngSubmit)="signupForm.valid && signUp(signupForm)">
+        <form  style="margin: 20px;" name="signup" novalidate #signupForm="ngForm" (ngSubmit)=" signUp(signupForm)">
           <div class="wave-group">
             <input required="" type="text" id="Name" class="input" name="userName" [(ngModel)]="newUser.name"  #userName="ngModel">
             <span class="bar"></span>

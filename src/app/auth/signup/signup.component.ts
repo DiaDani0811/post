@@ -29,9 +29,8 @@ export class SignupComponent implements OnInit {
   newUser :any = {};
   regUser : any=[];
   errmsg=''
-  signUp(form:any)
+  signUp(form)
   {
-    
     if(this.newUser.password == this.newUser.conPassword){
       this.api.newuserData(this.newUser).subscribe(data => {
         this.regUser.push(this.newUser)
